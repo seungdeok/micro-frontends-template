@@ -1,17 +1,18 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+import { defineAsyncComponent, ref } from "vue";
+const RemoteApp = defineAsyncComponent(() => import("./components/RemoteApp"));
+
+const number = ref(0);
+const increment = () => (number.value += 1);
+const decrement = () => (number.value -= 1);
 </script>
 
 <template>
   <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+    <h2>{{ number }}</h2>
+    <RemoteApp text="+" :onClick="increment" />
+    <RemoteApp text="-" :onClick="decrement" />
   </div>
-  <HelloWorld msg="Vite + Vue" />
 </template>
 
 <style scoped>
