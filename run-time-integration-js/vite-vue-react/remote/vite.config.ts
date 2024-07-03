@@ -6,10 +6,11 @@ import { NativeFederationTypeScriptRemote } from "@module-federation/native-fede
 const moduleFederationConfig = {
   name: "remote-app",
   filename: "remoteEntry.js",
+  remotes: {},
   exposes: {
-    "./Button": "./src/components/Button",
+    "./RemoteApp": "./src/bootstrap",
   },
-  shared: ["react-dom", "react"],
+  shared: [],
 };
 
 // https://vitejs.dev/config/
