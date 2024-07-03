@@ -6,9 +6,9 @@ import { NativeFederationTypeScriptHost } from "@module-federation/native-federa
 const moduleFederationConfig = {
   name: "host-app",
   remotes: {
-    remote: "http://localhost:5174/dist/assets/remoteEntry.js",
+    remote: "http://localhost:5173/dist/assets/remoteEntry.js",
   },
-  shared: ["react-dom", "react"],
+  shared: [],
 };
 
 // https://vitejs.dev/config/

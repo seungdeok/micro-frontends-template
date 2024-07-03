@@ -1,17 +1,10 @@
 <script setup lang="ts">
-import { defineAsyncComponent, ref } from "vue";
-const RemoteApp = defineAsyncComponent(() => import("./components/RemoteApp"));
-
-const number = ref(0);
-const increment = () => (number.value += 1);
-const decrement = () => (number.value -= 1);
+import RemoteApp from "./components/RemoteApp.vue";
 </script>
 
 <template>
   <div>
-    <h2>{{ number }}</h2>
-    <RemoteApp text="+" :onClick="increment" />
-    <RemoteApp text="-" :onClick="decrement" />
+    <RemoteApp />
   </div>
 </template>
 
