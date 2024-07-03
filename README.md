@@ -2,6 +2,10 @@
 
 Build `micro-frontends` template project
 
+## Index
+
+- [Run-time integration via Javascript](./run-time-integration-js/README.md)
+
 <br>
 
 ## Bug Report
